@@ -1,6 +1,6 @@
 /* Hello World program */
 
-#include<stdio.h>
+#include <stdio.h>
 
 int arr[5] = {1, 2, 3, 4, 5};
 int f_a(){

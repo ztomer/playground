@@ -4,7 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 
-typedef struct {
+typedef struct
+{
     uint64_t initialisationError : 1; /* bit 63 */
     uint64_t calibrationFault : 1;
     uint64_t paOverCurrent : 1;
@@ -81,8 +82,8 @@ int main()
     killme.initialisationError = 1;
 
     uint64_t val;
-    memcpy(&val,&killme, sizeof(uint64_t));
-   
+    memcpy(&val, &killme, sizeof(uint64_t));
+
     uint64_t testme = ((val & MASK_1) > 0);
     printf("testme %lu, val:%lu, \n", testme, val);
     printf("-=-----------------------------------------------===\n");
